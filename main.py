@@ -7,9 +7,9 @@ print('Setup End')
 
 print('Loop Start')
 while True:
-    #chequear todos los eventos
+    # chequear todos los eventeos
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
-            pygame.quit() #Cerrar la ventana
-            quit() #fin del juego al presionar 'X'
-
+            pygame.quit()  # Cerrar la ventana
+            quit()  # end pygame
+            #test para ver si sube bien
