@@ -15,7 +15,7 @@ from code.Menu import Menu
 class Game:
     def __init__(self):
         pygame.init()
-        self.window = pygame.display.set_mode(size=(742, 540))
+        self.window = pygame.display.set_mode(size=(576, 324))
 
     def run(self):
 
@@ -24,6 +24,7 @@ class Game:
             menu.run()
             pass
 
+pygame.display.set_caption("Diesel Nocturne")
 
     # chequer todos los events
     # for event in pygame.event.get():
