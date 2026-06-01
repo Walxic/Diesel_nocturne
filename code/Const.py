@@ -1,5 +1,6 @@
 COLOR_RED = (189, 42, 13)
 COLOR_WHITE = (255, 255, 255)
+COLOR_GREEN = (34, 153, 84)
 
 MENU_OPTION = ('New Game Player I',
                'New Game Player II cooperative',
