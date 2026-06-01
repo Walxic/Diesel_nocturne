@@ -4,11 +4,13 @@ from abc import ABC, abstractmethod
 
 import pygame
 
+from code.Const import WIN_WIDTH, WIN_HEIGHT
+
 
 class Entity(ABC):
-    def __init__(self, name: str, position: tuple):
+    def __init__(self, name: str, position: tuple, imagen_original=None):
         self.name = name
-        self.surf = pygame.image.load('./asset'+ name + '.png')
+        self.surf = pygame.image.load('./asset/'+ name + '.png')
         self.rect = self.surf.get_rect(left=position[0], top=position[1])
         self.speed = 0
 
