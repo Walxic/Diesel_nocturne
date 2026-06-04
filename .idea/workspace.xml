@@ -1,29 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea0c870a-1b67-4e35-a2e2-81f21a87be0a" name="Changes" comment="Menu with sound and options selecao">
-      <change afterPath="$PROJECT_DIR$/Redimensionar.py" afterDir="false" />
+    <list default="true" id="ea0c870a-1b67-4e35-a2e2-81f21a87be0a" name="Changes" comment="Menu and level 1 Background">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1fence.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1house&amp;fountain.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1houses2.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1houses3.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1road.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1sky.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level1trees.png" beforeDir="false" afterPath="$PROJECT_DIR$/asset/Level1Bg3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2cracks1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2houses1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2houses2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2houses3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2houses4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2sky.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Level2wall.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Backgound.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Background.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Const.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Const.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Entity.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/EntityFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EntityFactory.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Game.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/Menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,24 +53,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Python.Game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.Menu.executor&quot;: &quot;Coverage&quot;,
-    &quot;Python.game.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tanner/Desktop/Trabalhos/Jogo (Linguagem de progra)/asset&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Game.executor": "Run",
+    "Python.Menu.executor": "Coverage",
+    "Python.game.executor": "Run",
+    "Python.main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/Tanner/Desktop/Trabalhos/Jogo (Linguagem de progra)/asset",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Tanner\Desktop\Trabalhos\Jogo (Linguagem de progra)\asset" />
@@ -117,7 +102,8 @@
       <workItem from="1779635989961" duration="379000" />
       <workItem from="1779636653078" duration="22764000" />
       <workItem from="1780064743013" duration="50171000" />
-      <workItem from="1780318081945" duration="9441000" />
+      <workItem from="1780318081945" duration="17649000" />
+      <workItem from="1780582810815" duration="2266000" />
     </task>
     <task id="LOCAL-00001" summary="new">
       <option name="closed" value="true" />
@@ -199,7 +185,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780317882851</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Menu and level 1 Background">
+      <option name="closed" value="true" />
+      <created>1780339719554</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1780339719554</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,11 +209,12 @@
     <MESSAGE value="back and sound in menu" />
     <MESSAGE value="Menu with sound and options" />
     <MESSAGE value="Menu with sound and options selecao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Menu with sound and options selecao" />
+    <MESSAGE value="Menu and level 1 Background" />
+    <option name="LAST_COMMIT_MESSAGE" value="Menu and level 1 Background" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Diesel_Nocturne$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1780228003747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
-    <SUITE FILE_PATH="coverage/Diesel_Nocturne$main.coverage" NAME="main Coverage Results" MODIFIED="1780339630975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Diesel_Nocturne$main.coverage" NAME="main Coverage Results" MODIFIED="1780583994537" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Diesel_Nocturne$game.coverage" NAME="game Coverage Results" MODIFIED="1779650931754" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Diesel_Nocturne$Game.coverage" NAME="Game Coverage Results" MODIFIED="1780150954659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />
   </component>

@@ -2,8 +2,11 @@
 # -*- coding: utf-8 -*-
 from unittest import case
 
+from pygame.examples.grid import WINDOW_HEIGHT
+
 from code.Background import Background
 from code.Const import WIN_WIDTH
+from code.player import Player
 
 
 class EntityFactory:
@@ -18,3 +21,5 @@ class EntityFactory:
                     list_bg.append(Background(f'Level1Bg{i}',(0,0)))
                     list_bg.append(Background(f'Level1Bg{i}', (WIN_WIDTH, 0)))
                 return list_bg
+            case 'Player1':
+               return Player(f'Player1', (10, WINDOW_HEIGHT/ 2))

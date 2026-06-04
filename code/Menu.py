@@ -8,7 +8,7 @@ from code.Const import WIN_WIDTH, COLOR_RED, MENU_OPTION, COLOR_WHITE, COLOR_GRE
 class Menu:
     def __init__(self, window):
         self.window = window
-        self.surf = pygame.image.load("./asset/Menu_576x324.jpg")
+        self.surf = pygame.image.load("./asset/Menu_576x324.jpg").convert_alpha()
         self.rect = self.surf.get_rect()
         pygame.key.set_repeat(300, 100)
 
