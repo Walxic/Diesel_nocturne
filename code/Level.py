@@ -1,28 +1,35 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+import random
 import pygame
-from pygame import Rect
-from pygame.examples.grid import WINDOW_HEIGHT
 
+from pygame import Rect
 from pygame.font import Font
 from pygame.surface import Surface
 
-from code.Const import COLOR_WHITE, WIN_WIDTH
+from code.Const import COLOR_WHITE, WIN_HEIGHT, MENU_OPTION, EVENT_ENEMY, WIN_WIDTH
 from code.Entity import Entity
 from code.EntityFactory import EntityFactory
 
 
 class Level:
     def __init__(self, window, name, game_mode):
-        self.timeout = 5000
+        self.timeout = 20000
         self.clock = pygame.time.Clock()
         self.window = window
         self.name = name
         self.game_mode = game_mode
+
+        self.running = True
+
+        self.text_font: Font = pygame.font.SysFont(name="lucida Sans Typewriter", size=14)
         self.entity_list: list [Entity] = []
         self.entity_list.extend(EntityFactory.get_entity('Level1Bg'))
         self.entity_list.append(EntityFactory.get_entity('Player1'))
-        self.timeout = 2000
+        if game_mode in (MENU_OPTION[1], MENU_OPTION[2]):
+            self.entity_list.append(EntityFactory.get_entity('Player2'))
+
+        pygame.time.set_timer(EVENT_ENEMY, 3000)
 
     def run(self, ):
         pygame.mixer_music.load(f'./asset/Level1.mp3')
@@ -34,6 +41,10 @@ class Level:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     quit()
+                if event.type == EVENT_ENEMY:
+                    choice = random.choice(('Enemy1', 'Enemy2'))
+                    self.entity_list.append(EntityFactory.get_entity(choice))
+
             self.window.fill((0, 0, 0))
             for ent in self.entity_list:
                 self.window.blit(source=ent.surf, dest=ent.rect)
@@ -41,8 +52,8 @@ class Level:
             pygame.display.flip()
 
             self.level_text(14, f'{self.name} - Timeout: {self.timeout / 1000 : .1f}s', COLOR_WHITE, (10,5))
-            self.level_text(14, f'fps:{self.clock.get_fps() : .0f}', COLOR_WHITE, (10, WINDOW_HEIGHT - 5))
-            self.level_text(14, f'entities: {len(self.entity_list)}', COLOR_WHITE, (10, WINDOW_HEIGHT - 20))
+            self.level_text(14, f'fps:{self.clock.get_fps() : .0f}', COLOR_WHITE, (10, WIN_HEIGHT - 35))
+            self.level_text(14, f'entities: {len(self.entity_list)}', COLOR_WHITE, (12, WIN_HEIGHT - 20))
             pygame.display.flip()
         pass
 

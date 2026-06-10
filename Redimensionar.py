@@ -1,37 +1,38 @@
 import os
-import zipfile
 from PIL import Image
 
-# Configuración
-ANCHO = 576
-ALTO = 324
-carpeta_assets = "./asset"
-nombre_zip = "fondos_Level2_576x324.zip"
 
-print("Comenzando el redimensionamiento de las imágenes del Nivel 2...")
+def redimensionar_enemigos():
+    # Diccionario con la configuración de los enemigos: "Nombre": ("Archivo_Origen", (Ancho, Alto))
+    enemigos = {
+        "Enemy1": ("./asset/Enemy1.png", (59, 26)),
+        "Enemy2": ("./asset/Enemy2.png", (59, 27))
+    }
 
-# Creamos el archivo ZIP de respaldo
-with zipfile.ZipFile(nombre_zip, 'w') as archivo_zip:
-    # Buscamos las 7 capas del fondo del nivel 2 (del 0 al 6)
-    for i in range(7):
-        # CAMBIO AQUÍ: Ahora busca 'Level2BgX.png'
-        nombre_archivo = f"Level2Bg{i}.png"
-        ruta_completa = os.path.join(carpeta_assets, nombre_archivo)
+    for nombre, (ruta_origen, nuevo_tamano) in enemigos.items():
+        if not os.path.exists(ruta_origen):
+            print(f"❌ Error: No se encontró el archivo original en: {ruta_origen}")
+            print(
+                f"Asegúrate de que el archivo se llame exactamente '{os.path.basename(ruta_origen)}' dentro de asset.")
+            continue
 
-        if os.path.exists(ruta_completa):
-            # 1. Abrimos la imagen gigante del Nivel 2
-            with Image.open(ruta_completa) as img:
-                # 2. La redimensionamos manteniendo los píxeles nítidos (estilo Pixel Art)
-                img_redimensionada = img.resize((ANCHO, ALTO), Image.Resampling.NEAREST)
+        try:
+            with Image.open(ruta_origen) as img:
+                # Creamos el nombre de destino (ej: ./asset/Enemy1_scaled_59x26.png)
+                ruta_destino = f"./asset/{nombre}_scaled_{nuevo_tamano[0]}x{nuevo_tamano[1]}.png"
 
-                # 3. Guardamos los cambios directamente en tu carpeta asset
-                img_redimensionada.save(ruta_completa)
+                # Redimensionar con filtro de alta calidad
+                img_redimensionada = img.resize(nuevo_tamano, Image.Resampling.LANCZOS)
 
-                # 4. Añadimos la imagen al archivo ZIP
-                archivo_zip.write(ruta_completa, arcname=nombre_archivo)
-                print(f"✓ {nombre_archivo} procesada a 576x324 y guardada.")
-        else:
-            print(f"✗ No se encontró el archivo en la carpeta asset: {nombre_archivo}")
+                # Guardar el resultado
+                img_redimensionada.save(ruta_destino, "PNG")
 
-print(f"\n¡Listo! Las imágenes originales de 'Level2Bg' han sido modificadas.")
-print(f"Se generó el respaldo '{nombre_zip}' en la raíz de tu proyecto.")
+                print(f"✨ ¡{nombre} listo! Guardado en: {ruta_destino}")
+                print(f"   Tamaño original: {img.size} -> Nuevo tamaño: {img_redimensionada.size}")
+
+        except Exception as e:
+            print(f"💥 Ocurrió un error al procesar {nombre}: {e}")
+
+
+if __name__ == "__main__":
+    redimensionar_enemigos()
