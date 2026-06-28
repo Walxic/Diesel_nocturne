@@ -3,6 +3,8 @@ import pygame
 COLOR_RED = (189, 42, 13)
 COLOR_WHITE = (255, 255, 255)
 COLOR_GREEN = (34, 153, 84)
+COLOR_BLUE = (81, 162, 255)
+COLOR_VIOLET = (200, 28, 222)
 
 MENU_OPTION = ('New Game Player I',
                'New Game Player II cooperative',
@@ -19,9 +21,13 @@ ENTITY_SPEED = {
     'Level1Bg5' : 5,
     'Level1Bg6' : 6,
     'Player1' : 3,
+    'Player1Shot' : 2,
     'Player2' : 3,
+    'Player2Shot' : 4,
     'Enemy1' : 2,
+    'Enemy1Shot': 5,
     'Enemy2' : 4,
+    'Enemy2Shot': 8,
 }
 
 ENTITY_HEALTH = {
@@ -43,13 +49,18 @@ ENTITY_HEALTH = {
     'Player2': 300,
     'Player2Shot': 1,
     'Enemy1': 50,
-    'Enemy1Shot': 1,
+    'Enemy1Shot': 5,
     'Enemy2': 60,
-    'Enemy2Shot': 1,
+    'Enemy2Shot': 2,
 }
 
 
-
+ENTITY_SHOT_DELAY = {
+    'Player1': 10,
+    'Player2': 15,
+    'Enemy1': 55,
+    'Enemy2': 45,
+}
 
 
 EVENT_ENEMY = pygame.USEREVENT + 1
@@ -65,5 +76,53 @@ PLAYER_K_LEFT = {'Player2': pygame.K_LEFT,
                    'Player1': pygame.K_a}
 PLAYER_K_RIGHT = {'Player2': pygame.K_RIGHT,
                     'Player1': pygame.K_d}
-PLAYER_K_SHOOT = {'Player2': pygame.K_SPACE,
-                    'Player1': pygame.K_0}
+PLAYER_K_SHOT = {'Player2': pygame.K_RCTRL,
+                    'Player1': pygame.K_LCTRL}
+
+ENTITY_DAMAGE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Level1Bg6': 0,
+    'Level2Bg0': 0,
+    'Level2Bg1': 0,
+    'Level2Bg2': 0,
+    'Level2Bg3': 0,
+    'Level2Bg4': 0,
+    'Level2Bg5': 0,
+    'Player1': 1,
+    'Player1Shot': 25,
+    'Player2': 1,
+    'Player2Shot': 20,
+    'Enemy1': 1,
+    'Enemy1Shot': 20,
+    'Enemy2': 1,
+    'Enemy2Shot': 15,
+}
+
+ENTITY_SCORE = {
+    'Level1Bg0': 0,
+    'Level1Bg1': 0,
+    'Level1Bg2': 0,
+    'Level1Bg3': 0,
+    'Level1Bg4': 0,
+    'Level1Bg5': 0,
+    'Level1Bg6': 0,
+    'Level2Bg0': 0,
+    'Level2Bg1': 0,
+    'Level2Bg2': 0,
+    'Level2Bg3': 0,
+    'Level2Bg4': 0,
+    'Level2Bg5': 0,
+    'Player1': 0,
+    'Player1Shot': 0,
+    'Player2': 0,
+    'Player2Shot': 0,
+    'Enemy1': 10,
+    'Enemy1Shot': 0,
+    'Enemy2': 15,
+    'Enemy2Shot': 0,
+}

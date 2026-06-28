@@ -9,7 +9,7 @@ from pygame.examples.grid import WINDOW_HEIGHT
 from code.Background import Background
 from code.Const import WIN_WIDTH, WIN_HEIGHT
 from code.Enemy import Enemy
-from code.player import Player
+from code.Player import Player
 
 
 class EntityFactory:

@@ -14,3 +14,5 @@ class Background(Entity):
             self.rect.left = WIN_WIDTH
 
         pass
+
+
