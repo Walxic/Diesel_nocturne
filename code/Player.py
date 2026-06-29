@@ -5,16 +5,12 @@ from code.Const import (ENTITY_SPEED, WIN_HEIGHT, PLAYER_K_RIGHT, PLAYER_K_LEFT,
 from code.Entity import Entity
 from code.PlayerShot import PlayerShot
 
-
 class Player(Entity):
     def __init__(self, name: str, position: tuple):
         super().__init__(name, position)
         self.shot_delay = ENTITY_SHOT_DELAY[self.name]
-
     def update(self, ):
-        pass
-
-
+        self.move()
     def move(self, ):
         pressed_keys = pygame.key.get_pressed()
         if pressed_keys[PLAYER_K_UP[self.name]] and self.rect.top > 0:
@@ -26,13 +22,12 @@ class Player(Entity):
         if pressed_keys[PLAYER_K_RIGHT[self.name]] and self.rect.right < WIN_WIDTH:
             self.rect.centerx += ENTITY_SPEED[self.name]
         pass
-
-
     def shot(self):
-        self.shot_delay -= 1
-        if self.shot_delay == 0:
-            self.shot_delay = ENTITY_SHOT_DELAY[self.name]
-            pressed_key = pygame.key.get_pressed()
-            if pressed_key[PLAYER_K_SHOT[self.name]]:
+        if self.shot_delay > 0:
+            self.shot_delay -= 1
+        pressed_key = pygame.key.get_pressed()
+        if pressed_key[PLAYER_K_SHOT[self.name]]:
+            if self.shot_delay == 0:
+                self.shot_delay = ENTITY_SHOT_DELAY[self.name]
                 return PlayerShot(name=f'{self.name}Shot', position=(self.rect.centerx, self.rect.centery))
         return None
