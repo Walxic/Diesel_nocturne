@@ -27,6 +27,7 @@ class Level:
         if game_mode in (MENU_OPTION[1], MENU_OPTION[2]):
             player = EntityFactory.get_entity('Player2')
             player.score = player_score[1]
+            self.entity_list.append(player)
         self.clock = pygame.time.Clock()
         self.running = True
         self.text_font: Font = pygame.font.SysFont(name="lucida Sans Typewriter", size=14)
