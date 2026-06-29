@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea0c870a-1b67-4e35-a2e2-81f21a87be0a" name="Changes" comment="Level 2 + score">
-      <change afterPath="$PROJECT_DIR$/asset/Score.mp3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/DBProxy.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/code/Score.py" afterDir="false" />
+    <list default="true" id="ea0c870a-1b67-4e35-a2e2-81f21a87be0a" name="Changes" comment="score + return">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Redimensionar.py" beforeDir="false" afterPath="$PROJECT_DIR$/Redimensionar.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/asset/Score_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Const.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Const.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code/Game.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Redimensionar.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/code/EntityFactory.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/EntityFactory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code/Level.py" beforeDir="false" afterPath="$PROJECT_DIR$/code/Level.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fondos_576x324.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/fondos_Level2_576x324.zip" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1782737465824</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="score + return">
+      <option name="closed" value="true" />
+      <created>1782747858397</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1782747858397</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -303,7 +308,8 @@
     <MESSAGE value="mediator" />
     <MESSAGE value="Shot+Score+health" />
     <MESSAGE value="Level 2 + score" />
-    <option name="LAST_COMMIT_MESSAGE" value="Level 2 + score" />
+    <MESSAGE value="score + return" />
+    <option name="LAST_COMMIT_MESSAGE" value="score + return" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Diesel_Nocturne$Menu.coverage" NAME="Menu Coverage Results" MODIFIED="1781119278340" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/code" />

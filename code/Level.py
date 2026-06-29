@@ -81,6 +81,7 @@ class Level:
             pygame.display.flip()
             EntityMediator.verify_collision(entity_list=self.entity_list)
             EntityMediator.verify_health(entity_list=self.entity_list)
+
     def level_text(self, text_size: int, text: str, text_color: tuple, text_pos: tuple):
         text_font: Font = pygame.font.SysFont(name="lucida Sans Typewriter", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
